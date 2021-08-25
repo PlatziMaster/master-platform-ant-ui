@@ -13,7 +13,6 @@ export const stateTodos = 'todos';
 export function GetTodos() {
   return useQuery([stateTodos], async () => {
     const response = await axios.get(endPoints.todos.getAll);
-    console.log(response);
     return response.data;
   });
 }
