@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import './translations/i18n';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -13,7 +14,7 @@ const queryClient = new QueryClient({
     },
     mutations: {
       retry: false,
-    }
+    },
   },
 });
 

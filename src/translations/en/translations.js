@@ -13,6 +13,9 @@ const TRANSLATIONS_EN = {
   'master.Profile.labelPhase': 'Phase',
   'master.Profile.labelStatus': 'Status',
   'master.Profile.labelCoaches': 'Coaches',
+  'master.Calendar.title': 'This Week',
+  'master.Calendar.joinbtn': 'JOIN A SESSION',
+  'master.Calendar.addbtn': 'ADD TO CALENDAR',
 };
 
 export default TRANSLATIONS_EN;
