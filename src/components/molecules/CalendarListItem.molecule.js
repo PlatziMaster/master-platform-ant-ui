@@ -27,8 +27,8 @@ function CalendarListItem({
   return (
     <List.Item
       actions={[
-        <Button type="primary">{t("master.Calendar.joinbtn")}</Button>,
-        <Button type="secondary">{t("master.Calendar.addbtn")}</Button>,
+        <Button key="joinbtn" type="primary">{t("master.Calendar.joinbtn")}</Button>,
+        <Button key="addbtn">{t("master.Calendar.addbtn")}</Button>,
       ]}
     >
       <List.Item.Meta
