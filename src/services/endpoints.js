@@ -1,4 +1,4 @@
-const API = process.env.API_URL || 'https://jsonplaceholder.typicode.com';
+const API = process.env.API_URL || "https://jsonplaceholder.typicode.com";
 
 const endPoints = {
   todos: {

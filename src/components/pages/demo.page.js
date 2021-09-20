@@ -1,7 +1,7 @@
 import { Button, Spin, Checkbox, Divider } from "antd";
 
 import { GetTodos } from "./../../services/todos.service";
-import './demo.css';
+import "./demo.css";
 
 function DemoPage() {
   const { status, data } = GetTodos({
