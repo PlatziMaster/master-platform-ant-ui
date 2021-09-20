@@ -18,8 +18,7 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": {
-  },
+  "rules": {},
   "overrides": [
     {
       "files": [
