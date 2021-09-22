@@ -12,11 +12,12 @@ import {
   Button,
 } from 'antd';
 import {
-  SlackOutlined,
   GithubOutlined,
   UploadOutlined,
+  LinkedinFilled,
+  CloudDownloadOutlined,
+  LaptopOutlined,
 } from '@ant-design/icons';
-
 function Profile(props) {
   const { t } = useTranslation();
   const { Title, Text } = Typography;
@@ -26,47 +27,108 @@ function Profile(props) {
       <Col span={24} lg={7} style={{ paddingLeft: '8px', paddingRight: '8px' }}>
         <Card bordered={false}>
           <div style={{ textAlign: 'center' }}>
-            <Avatar size={150} src={props.avatarImg} alt={props.name}></Avatar>
+            <Space>
+              <Avatar size={120} src={props.avatarImg} alt={props.name} />
+            </Space>
             <Title level={3}>{props.name}</Title>
-            <div>
-              <span>
-                <img
-                  style={{ width: '24px' }}
+            <Space>
+              <a
+                href={'https://platzi.com/p/' + props.platziUser}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>
+                  <img
+                    style={{ width: '25px' }}
+                    src={
+                      'https://startupxplore.com/uploads/ff8080815235115101523595712a00de-large.png'
+                    }
+                    alt="logo platzi"
+                  />
+                </span>
+              </a>
+              <a href={props.website} target="_blank" rel="noreferrer">
+                <LaptopOutlined
+                  style={{
+                    fontSize: '25px',
+                    color: '#000',
+                  }}
                   src={
                     'https://startupxplore.com/uploads/ff8080815235115101523595712a00de-large.png'
                   }
                   alt="logo platzi"
                 />
-              </span>
-              {props.platziUser}
-            </div>
-            <div>
-              {props.isActive
-                ? t('master.Profile.active') + ' ✅'
-                : t('master.Profile.inactive') + ' ☑️'}
-            </div>
+              </a>
+              <a
+                href={'https://github.com/' + props.gitHub}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GithubOutlined
+                  style={{
+                    fontSize: '25px',
+                    color: '#000',
+                  }}
+                  src={
+                    'https://startupxplore.com/uploads/ff8080815235115101523595712a00de-large.png'
+                  }
+                  alt="logo platzi"
+                />
+              </a>
+
+              <a
+                href={'https://linkedin.com/in/' + props.linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <LinkedinFilled
+                  style={{
+                    fontSize: '25px',
+                    color: '#000',
+                  }}
+                  src={
+                    'https://startupxplore.com/uploads/ff8080815235115101523595712a00de-large.png'
+                  }
+                  alt="logo platzi"
+                />
+              </a>
+              <a href={props.cv} target="_blank" rel="noreferrer">
+                <CloudDownloadOutlined
+                  style={{
+                    fontSize: '25px',
+                    color: '#000',
+                  }}
+                  src={
+                    'https://startupxplore.com/uploads/ff8080815235115101523595712a00de-large.png'
+                  }
+                  alt="logo platzi"
+                />
+              </a>
+            </Space>
           </div>
           <Divider orientation="left">
             {t('master.Profile.labelPersonal')}
           </Divider>
           <Space direction="vertical">
-            <div>
-              <Text strong>RFC/CEDULA: </Text>
-              {props.idNumber}
-            </div>
-            <div>
+            <Space>
+              <Text strong>RFC/CEDULA:</Text>
+              <Text editable>{props.idNumber}</Text>
+            </Space>
+            <Space>
               <Text strong>{t('master.Profile.address')}: </Text>
-              {props.address}
-            </div>
-            <div>
+              <Text editable>{props.address}</Text>
+            </Space>
+            <Space>
               <Text strong>{t('master.Profile.phone')}: </Text>
-              {props.phone}
-            </div>
-            <Upload>
-              <Button>
-                <UploadOutlined /> {t('master.Profile.btnUpload')}
-              </Button>
-            </Upload>
+              <Text editable>{props.phone}</Text>
+            </Space>
+            <Space>
+              <Upload>
+                <Button icon={<UploadOutlined />}>
+                  {t('master.Profile.btnUpload')}
+                </Button>
+              </Upload>
+            </Space>
           </Space>
         </Card>
       </Col>
@@ -80,46 +142,48 @@ function Profile(props) {
             {t('master.Profile.labelGeneral')}
           </Divider>
           <Space direction="vertical">
-            <div>
-              <Text strong>{t('master.Profile.labelCohort')}:</Text>{' '}
-              {props.cohort}
-            </div>
-            <div>
-              <Text strong>{t('master.Profile.labelCountry')}:</Text>{' '}
-              {props.country}
-            </div>
-            <div>
+            <Space>
+              <Text strong>{t('master.Profile.labelActive')}:</Text>
+              <Text>
+                {props.isActive
+                  ? t('master.Profile.active')
+                  : t('master.Profile.inactive')}
+              </Text>
+            </Space>
+            <Space>
+              <Text strong>{t('master.Profile.labelCohort')}:</Text>
+              <Text>{props.cohort}</Text>
+            </Space>
+            <Space>
+              <Text strong>{t('master.Profile.labelCountry')}:</Text>
+              <Text>{props.country}</Text>
+            </Space>
+            <Space>
               <Text strong>{t('master.Profile.labelPhase')}: </Text>
-              {props.phase}
-            </div>
-            <div>
+              <Text>{props.phase}</Text>
+            </Space>
+            <Space>
               <Text strong>{t('master.Profile.labelStatus')}: </Text>
-              {props.status}
-            </div>
-            <div>
-              <SlackOutlined style={{ marginRight: '8px', fontSize: '20px' }} />
-              {props.slack}
-            </div>
-            <div>
-              <GithubOutlined
-                style={{ marginRight: '8px', fontSize: '20px' }}
-              />
-              {props.gitHub}
-            </div>
+              <Text>{props.status}</Text>
+            </Space>
+            <Space>
+              <Text strong>{t('master.Profile.labelSlack')}: </Text>
+              <Text>{props.slack}</Text>
+            </Space>
           </Space>
           <Divider orientation="left">
             {t('master.Profile.labelCoaches')}
           </Divider>
           <Row gutter={[16, 16]}>
-            {Object.entries(props.coaches).map((item, i) => (
+            {props.coaches.map((item, i) => (
               <Col key={i}>
                 <Space align="end">
-                  <Avatar size={55} src={item[1].avatarImg}>
-                    alt={item[1].name}
+                  <Avatar size={55} src={item.avatarImg}>
+                    alt={item.name}
                   </Avatar>
                   <div style={{ margin: '12px' }}>
-                    <div>{item[1].name}</div>
-                    <Text type="secondary">{item[1].role}</Text>
+                    <div>{item.name}</div>
+                    <Text type="secondary">{item.type}</Text>
                   </div>
                 </Space>
               </Col>
@@ -135,6 +199,10 @@ Profile.propTypes = {
   avatarImg: PropTypes.string,
   name: PropTypes.string,
   platziUser: PropTypes.string,
+  website: PropTypes.string,
+  gitHub: PropTypes.string,
+  linkedin: PropTypes.string,
+  cv: PropTypes.string,
   isActive: PropTypes.bool,
   idNumber: PropTypes.string,
   address: PropTypes.string,
@@ -142,8 +210,8 @@ Profile.propTypes = {
   cohort: PropTypes.string,
   status: PropTypes.string,
   slack: PropTypes.string,
-  gitHub: PropTypes.string,
-  coaches: PropTypes.object,
+  focus: PropTypes.string,
+  coaches: PropTypes.array,
 };
 
 export default Profile;

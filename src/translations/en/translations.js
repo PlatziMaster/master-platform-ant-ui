@@ -1,6 +1,7 @@
 const TRANSLATIONS_EN = {
   'master.NavAdmin.profile': 'My Profile',
   'master.NavAdmin.calendar': 'Calendar',
+  'master.Profile.labelActive': 'IsActive',
   'master.Profile.active': 'Active',
   'master.Profile.inactive': 'Inactive',
   'master.Profile.labelPersonal': 'Personal info',
@@ -12,6 +13,7 @@ const TRANSLATIONS_EN = {
   'master.Profile.labelCountry': 'Country',
   'master.Profile.labelPhase': 'Phase',
   'master.Profile.labelStatus': 'Status',
+  'master.Profile.labelSlack': 'Slack',
   'master.Profile.labelCoaches': 'Coaches',
   'master.Calendar.title': 'This Week',
   'master.Calendar.joinbtn': 'JOIN A SESSION',

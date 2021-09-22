@@ -1,5 +1,5 @@
 import Profile from '../molecules/profile.molecule';
-import { GetInfoUser } from '../../services/infoUser.services';
+import { GetInfoUser } from '../../services/profile.services';
 import { Layout, Spin } from 'antd';
 const { Content } = Layout;
 
@@ -22,7 +22,7 @@ function ProfileView() {
             />
           </div>
         ) : (
-          data.map((item) => <Profile key={item.id} {...item} />)
+          <Profile key={data.id} {...data} />
         )}
       </Content>
     </Layout>
