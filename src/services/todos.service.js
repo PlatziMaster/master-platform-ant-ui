@@ -1,6 +1,6 @@
-import { useMutation, useQuery } from "react-query";
-import axios from "axios";
-import endPoints from "./endpoints";
+import { useMutation, useQuery } from 'react-query';
+import axios from 'axios';
+import endPoints from './endpoints';
 
 export function CreateTodo(options) {
   return useMutation(
@@ -9,7 +9,7 @@ export function CreateTodo(options) {
   );
 }
 
-export const stateTodos = "todos";
+export const stateTodos = 'todos';
 export function GetTodos() {
   return useQuery([stateTodos], async () => {
     const response = await axios.get(endPoints.todos.getAll);

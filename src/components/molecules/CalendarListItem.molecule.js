@@ -1,6 +1,6 @@
-import { Button, Typography, Avatar, List } from "antd";
-import { useTranslation } from "react-i18next";
-import PropTypes from "prop-types";
+import { Button, Typography, Avatar, List } from 'antd';
+import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
 function CalendarListItem({
   title,
@@ -15,7 +15,7 @@ function CalendarListItem({
 
   const getShortTime = (time) =>
     new Date(time).toLocaleTimeString([], {
-      timeStyle: "short",
+      timeStyle: 'short',
     });
 
   const getScheduleTime = () => {
@@ -28,9 +28,9 @@ function CalendarListItem({
     <List.Item
       actions={[
         <Button key="joinbtn" type="primary">
-          {t("master.Calendar.joinbtn")}
+          {t('master.Calendar.joinbtn')}
         </Button>,
-        <Button key="addbtn">{t("master.Calendar.addbtn")}</Button>,
+        <Button key="addbtn">{t('master.Calendar.addbtn')}</Button>,
       ]}
     >
       <List.Item.Meta
