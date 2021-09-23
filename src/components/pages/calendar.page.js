@@ -1,8 +1,8 @@
-import { Typography, List } from "antd";
-import { useTranslation } from "react-i18next";
-import CalendarListItem from "../molecules/CalendarListItem.molecule";
-import { GetEvents } from "../../services/events.service";
-import "./calendar.css";
+import { Typography, List } from 'antd';
+import { useTranslation } from 'react-i18next';
+import CalendarListItem from '../molecules/CalendarListItem.molecule';
+import { GetEvents } from '../../services/events.service';
+import './calendar.css';
 
 function CalendarPage() {
   const { data, isLoading } = GetEvents();
@@ -11,7 +11,7 @@ function CalendarPage() {
 
   return (
     <div className="CalendarPage">
-      <Title level={3}>{t("master.Calendar.title")}</Title>
+      <Title level={3}>{t('master.Calendar.title')}</Title>
       <div className="CalendarContainer">
         <List
           loading={isLoading}

@@ -212,6 +212,8 @@ Profile.propTypes = {
   slack: PropTypes.string,
   focus: PropTypes.string,
   coaches: PropTypes.array,
+  country: PropTypes.string,
+  phase: PropTypes.string,
 };
 
 export default Profile;

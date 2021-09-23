@@ -4,7 +4,7 @@ import endPoints from './endpoints';
 
 export function CreateTodo(options) {
   return useMutation(
-    body => axios.post(endPoints.todos.create, body).then((res) => res.data),
+    (body) => axios.post(endPoints.todos.create, body).then((res) => res.data),
     options
   );
 }
@@ -18,11 +18,8 @@ export function GetTodos() {
 }
 
 export function UpdateTodos(options) {
-  return useMutation(
-    values => {
-      const { id, body } = values;
-      return axios.put(endPoints.todos.update(id), body).then((res) => res.data);
-    },
-    options
-  );
+  return useMutation((values) => {
+    const { id, body } = values;
+    return axios.put(endPoints.todos.update(id), body).then((res) => res.data);
+  }, options);
 }

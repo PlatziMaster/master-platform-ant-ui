@@ -1,6 +1,6 @@
-import { Button, Spin, Checkbox, Divider } from "antd";
+import { Button, Spin, Checkbox, Divider } from 'antd';
 
-import { GetTodos } from "./../../services/todos.service";
+import { GetTodos } from './../../services/todos.service';
 import './demo.css';
 
 function DemoPage() {
@@ -11,7 +11,7 @@ function DemoPage() {
     <div className="DemoPage">
       <Button type="primary">Button</Button>
       <Divider />
-      {status === "loading" ? (
+      {status === 'loading' ? (
         <Spin />
       ) : (
         data.map((todo) => (
