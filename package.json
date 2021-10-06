@@ -31,7 +31,7 @@
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "prepare": "husky install",
-    "commit": "cz"
+    "cm": "cz"
   },
   "eslintConfig": {
     "extends": [
