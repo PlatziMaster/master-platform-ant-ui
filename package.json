@@ -30,7 +30,8 @@
     "lint": "eslint './src/**/*.{js,jsx}'",
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cm": "cz"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,10 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "13.2.0",
+    "commitizen": "4.2.4",
+    "commitlint-config-gitmoji": "2.2.5",
+    "cz-customizable": "6.3.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
@@ -63,6 +68,11 @@
     "husky": "7.0.2",
     "lint-staged": "11.1.2",
     "prettier": "2.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint src/",
