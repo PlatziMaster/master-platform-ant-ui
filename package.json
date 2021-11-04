@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "4.6.4",
+    "@craco/craco": "^6.4.0",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "11.2.7",
     "@testing-library/user-event": "12.8.3",
     "antd": "4.16.13",
     "axios": "0.21.1",
+    "craco-less": "^1.20.0",
     "date-fns": "2.23.0",
     "formik": "2.2.9",
     "i18next": "20.4.0",
@@ -23,9 +25,9 @@
     "web-vitals": "1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{js,jsx}'",
     "lint:fix": "eslint './src/**/*.{js,jsx}' --fix",
@@ -66,6 +68,8 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.25.3",
     "husky": "7.0.2",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
     "lint-staged": "11.1.2",
     "prettier": "2.4.1"
   },

@@ -1,0 +1,58 @@
+@import '~antd/dist/antd.dark.less';
+
+@body-background: #121F3D;
+@popover-background: @body-background;
+@component-background: @body-background;
+@primary-color: #33B1FF; // primary color for all components
+@link-color: #33B1FF; // link color
+@success-color: #98CA3F; // success state color
+@warning-color: #FF955B; // warning state color
+@error-color: #FF605B; // error state color
+@font-size-base: 14px; // major text font size
+@heading-color: rgba(255, 255, 255, 0.85); // heading text color
+@text-color: rgba(255, 255, 255, .7); // major text color
+@text-color-secondary: rgba(255, 255, 255, 0.45); // secondary text color
+@disabled-color: rgba(255, 255, 255, 0.25); // disable state color
+@border-radius-base: 8px; // major border radius
+@border-color-base: white; // major border color
+@border-color-split: #24385B;
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // major shadow for layers
+@font-family: 'Roboto', sans-serif, Arial;
+@typography-title-font-weight: 700;
+@btn-padding-horizontal-base: 16px;
+@btn-text-shadow: none;
+@btn-shadow: none;
+@btn-font-weight: 700;
+@layout-trigger-background: @body-background;
+
+
+// .ant-breadcrumb-link,
+// .ant-breadcrumb-separator,
+// .ant-breadcrumb a {
+//   color: white;
+// }
+.ant-dropdown-menu {
+  border: 1px solid @border-color-split;
+}
+.ant-btn {
+  text-transform: uppercase;
+}
+.ant-btn-primary {
+  color: #03091E;
+}
+.ant-btn-dangerous.ant-btn-primary {
+  color: #03091E;
+}
+.ant-layout-sider,
+.ant-layout-sider-trigger {
+  border-right: 1px solid @border-color-split;
+}
+
+.ant-menu-item > .ant-menu-title-content,
+.ant-menu-submenu > .ant-menu-submenu-title .ant-menu-title-content {
+  font-weight: 700;
+}
+// .ant-form-item-label  .ant-input-password-icon,
+// .ant-form-item-label > label {
+//   color: white;
+// }
